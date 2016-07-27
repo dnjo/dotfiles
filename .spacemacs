@@ -267,6 +267,8 @@ layers configuration. You are free to put any user code."
   (setq auto-fill-mode t)
   (setq sp-highlight-pair-overlay nil)
   (setq web-mode-markup-indent-offset 2)
+  (setq sh-basic-offset 2)
+  (setq sh-indentation 2)
 
   (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
   )
