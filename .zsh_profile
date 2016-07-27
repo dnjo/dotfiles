@@ -11,6 +11,11 @@ rspec() {
   bundle exec rspec "$@";
 }
 
+rails() {
+  if [ -e .env ]; then source .env; fi
+  bundle exec rails s "$@"
+}
+
 docker-exec() {
   if [ -e .env ]; then
     env_file_path=/tmp/.env-$1
