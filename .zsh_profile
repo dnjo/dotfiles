@@ -1,0 +1,58 @@
+source ~/.ssh_aliases
+source ~/.mm_functions
+
+export PATH="$HOME/.exenv/bin:$PATH"
+eval "$(exenv init -)"
+eval "$(rbenv init -)"
+
+rspec() {
+  if [ -e .env ]; then source .env; fi
+  if [ -e .env-test ]; then source .env-test; fi
+  bundle exec rspec "$@";
+}
+
+docker-exec() {
+  if [ -e .env ]; then
+    env_file_path=/tmp/.env-$1
+    env_arg='--env-file $env_file_path'
+    sed 's/^export //g' .env > $env_file_path
+  fi
+
+  image=$1
+  shift
+  docker run -it -v $(pwd):/app --add-host localhost:10.0.2.2 --env-file $env_file_path $image "$@"
+}
+
+docker-rails() {
+  if [ -e .env ]; then
+    env_file_path=/tmp/.env-$1
+    env_arg='--env-file $env_file_path'
+    sed 's/^export //g' .env > $env_file_path
+  fi
+
+  docker run -v $(pwd):/app --add-host localhost:10.0.2.2 -p $2:3000 --env-file $env_file_path $1 bundle exec rails s
+}
+
+rocker-build() {
+  cd $1
+
+  cat > Rockerfile <<EOF
+FROM ruby:$(cat .ruby-version)
+
+MOUNT /Users/dennis/.ssh/id_rsa:/root/.ssh/id_rsa
+MOUNT /Users/dennis/.ssh/known_hosts:/root/.ssh/known_hosts
+
+WORKDIR /tmp
+COPY Gemfile Gemfile
+COPY Gemfile.lock Gemfile.lock
+RUN bundle install
+
+RUN mkdir /app
+WORKDIR /app
+
+TAG $2
+EOF
+
+  rocker build .
+  rm Rockerfile
+}
