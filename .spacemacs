@@ -256,6 +256,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (global-linum-mode)
+  (global-flycheck-mode)
 
   (setq-default require-final-newline t)
   (setq frame-resize-pixelwise t)
