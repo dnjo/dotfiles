@@ -11,7 +11,7 @@ rspec() {
   bundle exec rspec "$@";
 }
 
-rails() {
+run-rails() {
   if [ -e .env ]; then source .env; fi
   bundle exec rails s "$@"
 }
