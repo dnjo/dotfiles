@@ -1,0 +1,18 @@
+rubocop-compare() {
+  commit=$1
+  shift
+  rubocop_command="bundle exec rubocop $@"
+
+  git stash
+  git checkout $commit
+  rubocop_commit=$(mktemp)
+  eval $rubocop_command > $rubocop_commit
+
+  git checkout -
+  git stash pop
+  rubocop_current=$(mktemp)
+  eval $rubocop_command > $rubocop_current
+
+  diff $rubocop_commit $rubocop_current
+  rm $rubocop_commit $rubocop_current
+}
