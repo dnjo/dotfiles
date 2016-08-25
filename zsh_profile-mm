@@ -1,6 +1,6 @@
-source ~/.ssh_aliases
-source ~/.mm_functions
-source ~/.dcor
+source ~/.dotfiles/ssh_aliases
+source ~/.dotfiles/mm_functions
+source ~/.dotfiles/dcor
 
 export DCOR_PROJECT_DIR="~/Repositories/mittmedia"
 export DCOR_COMPOSE_DIR="~/Repositories/dnjo/compose-files"
