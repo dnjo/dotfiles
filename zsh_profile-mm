@@ -1,0 +1,30 @@
+source ~/.ssh_aliases
+source ~/.mm_functions
+source ~/.dcor
+
+export DCOR_PROJECT_DIR="~/Repositories/mittmedia"
+export DCOR_COMPOSE_DIR="~/Repositories/dnjo/compose-files"
+
+export PATH="$HOME/.exenv/bin:$PATH"
+eval "$(exenv init -)"
+eval "$(rbenv init -)"
+eval "$(docker-machine env)"
+
+rubocop-compare() {
+  commit=$1
+  shift
+  rubocop_command="bundle exec rubocop $@"
+
+  git stash
+  git checkout $commit
+  rubocop_commit=$(mktemp)
+  eval $rubocop_command > $rubocop_commit
+
+  git checkout -
+  git stash pop
+  rubocop_current=$(mktemp)
+  eval $rubocop_command > $rubocop_current
+
+  diff $rubocop_commit $rubocop_current
+  rm $rubocop_commit $rubocop_current
+}

@@ -1,0 +1,20 @@
+alias dcoup="docker-compose-project up"
+alias dcstop="docker-compose-project stop"
+alias dcor="docker-compose-project-run"
+alias dcor-rspec="dcor bundle exec rspec"
+alias dcor-bash="dcor /bin/bash"
+
+docker-compose-project() {
+  project_name=${PWD##*/}
+  project_dir="$DCOR_PROJECT_DIR/$project_name"
+  compose_file="$DCOR_COMPOSE_DIR/$project_name.yml"
+  command=$@
+  compose="PROJECT_DIR=$project_dir docker-compose -p $project_name -f $compose_file $command"
+  eval $compose
+}
+
+docker-compose-project-run() {
+  service=${PWD##*/}
+  command=$@
+  docker-compose-project run --rm $service $command
+}
