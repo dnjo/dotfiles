@@ -274,6 +274,7 @@ layers configuration. You are free to put any user code."
 
   (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("\\.js.*\\'" . javascript-mode))
+  (add-to-list 'auto-mode-alist '("\\.coffee.*\\'" . coffee-mode))
   )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
