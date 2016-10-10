@@ -6,7 +6,7 @@ alias dcor-bash="dcor /bin/bash"
 
 docker-compose-project() {
   project_name=${PWD##*/}
-  project_dir="$DCOR_PROJECT_DIR/$project_name"
+  project_dir=$(pwd)
   compose_file="$DCOR_COMPOSE_DIR/$project_name.yml"
   command=$@
   compose="PROJECT_DIR=$project_dir docker-compose -p $project_name -f $compose_file $command"
