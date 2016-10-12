@@ -16,3 +16,7 @@ rubocop-compare() {
   diff $rubocop_commit $rubocop_current
   rm $rubocop_commit $rubocop_current
 }
+
+reload-shell() {
+  source ~/.zshrc
+}
