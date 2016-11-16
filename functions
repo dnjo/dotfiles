@@ -20,3 +20,13 @@ rubocop-compare() {
 reload-shell() {
   source ~/.zshrc
 }
+
+heroku-push() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: heroku-push [app]"
+    return 1
+  fi
+  app="$1"
+  read -re "?Are you sure you want to push the current branch to $app?"
+  git push -f git@heroku.com:$app.git HEAD:master
+}
