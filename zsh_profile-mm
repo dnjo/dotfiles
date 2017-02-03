@@ -9,4 +9,3 @@ source $dotfiles/dco
 export PATH="$HOME/.exenv/bin:$PATH"
 eval "$(exenv init -)"
 eval "$(rbenv init -)"
-eval "$(docker-machine env)"
