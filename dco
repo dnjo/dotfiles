@@ -14,6 +14,6 @@ docker-compose-project() {
 
 docker-compose-project-run() {
   service=${PWD##*/}
-  command=$@
+  command="$@"
   docker-compose-project run --rm $service $command
 }
