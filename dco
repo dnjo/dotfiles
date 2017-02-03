@@ -7,10 +7,9 @@ alias dcor-rspec="dcor bundle exec rspec"
 alias dcor-bash="dcor /bin/bash"
 
 docker-compose-project() {
-  PROJECT_DIR=$(pwd)
   project_name=${PWD##*/}
   compose_file="$DCO_COMPOSE_DIR/$project_name.yml"
-  docker-compose -p $project_name -f $compose_file "$@"
+  PROJECT_DIR=$(pwd) docker-compose -p $project_name -f $compose_file "$@"
 }
 
 docker-compose-project-run() {
