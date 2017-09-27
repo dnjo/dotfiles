@@ -5,6 +5,7 @@ source $dotfiles/ssh_aliases
 source $dotfiles/functions
 source $dotfiles/mm_functions
 source $dotfiles/dco
+source $dotfiles/aliases
 
 export PATH="$HOME/.exenv/bin:$PATH"
 eval "$(exenv init -)"
