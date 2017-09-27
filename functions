@@ -30,3 +30,7 @@ heroku-push() {
   read -re "?Are you sure you want to push the current branch to $app?"
   git push -f git@heroku.com:$app.git HEAD:master
 }
+
+etargz() {
+  mkdir -p $2 && tar xzvf $1 -C $2
+}
