@@ -1,12 +1,10 @@
-source $DOTFILES/env
-source $DOTFILES/functions
-source $DOTFILES/aliases
+source $DOTFILES/env.sh
+source $DOTFILES/functions.sh
+source $DOTFILES/aliases.sh
 
 export PATH="$HOME/.exenv/bin:$PATH"
 eval "$(exenv init -)"
 eval "$(rbenv init -)"
-
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

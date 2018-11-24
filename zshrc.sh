@@ -84,4 +84,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export DOTFILES=~/.dotfiles
-source ~/.zsh_profile
+source $DOTFILES/zsh_profile.sh

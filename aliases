@@ -1,3 +1,0 @@
-[ -f $DOTFILES/aliases_local ] && source $DOTFILES/aliases_local
-
-alias git=hub
