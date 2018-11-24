@@ -1,6 +1,5 @@
 source $DOTFILES/env
 source $DOTFILES/functions
-source $DOTFILES/dco
 source $DOTFILES/aliases
 
 export PATH="$HOME/.exenv/bin:$PATH"
