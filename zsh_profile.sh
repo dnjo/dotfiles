@@ -13,3 +13,6 @@ export NVM_DIR="$HOME/.nvm"
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+USER_BASE_PATH=$(python -m site --user-base)
+export PATH=$PATH:$USER_BASE_PATH/bin
