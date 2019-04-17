@@ -2,3 +2,4 @@
 
 alias git=hub
 alias gdh="git diff HEAD^ HEAD"
+alias v=nvim
