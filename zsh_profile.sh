@@ -16,3 +16,10 @@ export NVM_DIR="$HOME/.nvm"
 
 USER_BASE_PATH=$(python -m site --user-base)
 export PATH=$PATH:$USER_BASE_PATH/bin
+
+export PATH=$PATH:/usr/local/MacGPG2/bin
+export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+if ! pgrep -x "gpg-agent" > /dev/null
+then
+    gpg-agent --daemon --enable-ssh-support > /dev/null
+fi
