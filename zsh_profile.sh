@@ -14,7 +14,6 @@ export NVM_DIR="$HOME/.nvm"
 
 powerline_path=/usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 [ -f $powerline_path ] && . $powerline_path
-#. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
