@@ -27,3 +27,7 @@ if [ -d /usr/local/MacGPG2 ]; then
         gpg-agent --daemon --enable-ssh-support > /dev/null
     fi
 fi
+
+if [ -f $HOME/.cargo/env ]; then
+    source $HOME/.cargo/env
+fi
