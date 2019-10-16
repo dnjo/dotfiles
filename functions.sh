@@ -34,3 +34,19 @@ heroku-push() {
 etargz() {
   mkdir -p $2 && tar xzvf $1 -C $2
 }
+
+cxtest() {
+  CONVOX_RACK=test convox "$@" 
+}
+
+cx() {
+  cxtest "$@"
+}
+
+cxstaging() {
+  CONVOX_RACK=staging convox "$@"
+}
+
+cxprod() {
+  CONVOX_RACK=prod convox "$@"
+}
