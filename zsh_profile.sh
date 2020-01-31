@@ -12,7 +12,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-powerline_path=/usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+powerline_path=$POWERLINE_PATH/bindings/zsh/powerline.zsh
 [ -f $powerline_path ] && . $powerline_path
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
