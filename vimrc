@@ -44,6 +44,10 @@ syntax enable
 
 map <C-n> :NERDTreeToggle<CR>
 map ; :Files<CR>
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
 
 set rtp+=/usr/local/opt/fzf
 set updatetime=500
