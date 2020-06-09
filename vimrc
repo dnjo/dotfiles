@@ -34,6 +34,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('tpope/vim-commentary')
   call dein#add('rust-lang/rust.vim')
+  call dein#add('mileszs/ack.vim')
 
   call dein#end()
   call dein#save_state()
