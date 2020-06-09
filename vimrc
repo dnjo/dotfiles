@@ -35,6 +35,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-commentary')
   call dein#add('rust-lang/rust.vim')
   call dein#add('mileszs/ack.vim')
+  call dein#add('christoomey/vim-tmux-navigator')
 
   call dein#end()
   call dein#save_state()
