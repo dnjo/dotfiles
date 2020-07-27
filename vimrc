@@ -40,6 +40,7 @@ if dein#load_state('~/.cache/dein')
   call dein#end()
   call dein#save_state()
 endif
+let g:deoplete#enable_at_startup = 1
 
 filetype plugin indent on
 syntax enable
@@ -50,6 +51,7 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 set rtp+=/usr/local/opt/fzf
 set updatetime=500
