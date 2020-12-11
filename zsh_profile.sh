@@ -17,11 +17,11 @@ export NVM_DIR="$HOME/.nvm"
 USER_BASE_PATH=$(python -m site --user-base)
 export PATH=$PATH:$USER_BASE_PATH/bin
 
-if [ -d /usr/local/MacGPG2 ]; then
-    export PATH=$PATH:/usr/local/MacGPG2/bin
-    export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+if [ -n "$DOTFILES_GPG_AGENT" ]; then
+    export GPG_TTY="$(tty)"
+    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
     if ! pgrep -x "gpg-agent" > /dev/null; then
-        gpg-agent --daemon --enable-ssh-support > /dev/null
+	gpgconf --launch gpg-agent
     fi
 fi
 
