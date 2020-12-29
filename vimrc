@@ -13,6 +13,8 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+autocmd FileType sh,zsh,vim setlocal tabstop=2 shiftwidth=2 expandtab
+
 if &compatible
   set nocompatible
 endif
