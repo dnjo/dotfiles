@@ -55,5 +55,5 @@ nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
-set rtp+=/usr/local/opt/fzf
+set rtp+=$DOTFILES_FZF_PATH
 set updatetime=500
