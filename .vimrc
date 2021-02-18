@@ -47,12 +47,22 @@ let g:deoplete#enable_at_startup = 1
 filetype plugin indent on
 syntax enable
 
-map <C-n> :NERDTreeToggle<CR>
-map ; :Files<CR>
+" Mappings
+let mapleader = ","
+map <silent> <C-n> :NERDTreeToggle<CR>
+
+" fzf
+" Search files from current directory
+nmap <silent> <C-f> :Files<CR>
+nmap <silent> <Leader>f :Ag<CR>
+
+" vim-tmux-navigator
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
+
+" Tab completion
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 set rtp+=$DOTFILES_FZF_PATH
