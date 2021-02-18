@@ -51,6 +51,15 @@ syntax enable
 let mapleader = ","
 map <silent> <C-n> :NERDTreeToggle<CR>
 
+nmap <silent> <Leader>n :bn<CR>
+nmap <silent> <Leader>p :bp<CR>
+nmap <silent> <Leader>l :ls<CR>
+nmap <Leader>b :b
+
+nmap <silent> <Leader>w :w<CR>
+nmap <silent> <Leader>wq :wq<CR>
+nmap <silent> <Leader>q :qa<CR>
+
 " fzf
 " Search files from current directory
 nmap <silent> <C-f> :Files<CR>
