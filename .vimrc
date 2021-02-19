@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 syntax enable
+colorscheme darcula
 set number
 set clipboard=unnamed
 set backspace=indent,eol,start
