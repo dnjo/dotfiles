@@ -69,6 +69,11 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
+" vim-commentary
+" CTRL-/ to comment line and block
+nmap <silent> <c-_> gcc
+vmap <silent> <c-_> gc
+
 " Tab completion
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
