@@ -3,4 +3,6 @@
 alias gdh="git diff HEAD^ HEAD"
 alias glu="glo @{u}...HEAD"
 alias v=nvim
+alias r=ranger
+alias q=escape-ranger
 alias refresh-yubikey='gpg-connect-agent "scd serialno" "learn --force" /bye > /dev/null'
