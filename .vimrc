@@ -37,6 +37,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('tpope/vim-commentary')
   call dein#add('christoomey/vim-tmux-navigator')
+  call dein#add('shime/vim-livedown')
+  call dein#add('907th/vim-auto-save')
 
   call dein#end()
   call dein#save_state()
