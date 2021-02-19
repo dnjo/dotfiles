@@ -35,8 +35,6 @@ if dein#load_state('~/.cache/dein')
   call dein#add('junegunn/fzf.vim')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('tpope/vim-commentary')
-  call dein#add('rust-lang/rust.vim')
-  call dein#add('mileszs/ack.vim')
   call dein#add('christoomey/vim-tmux-navigator')
 
   call dein#end()
