@@ -1,7 +1,7 @@
 export ZSH_THEME=typewritten
 export DOTFILES_GPG_AGENT=true
 export DOTFILES_FZF_PATH=/opt/homebrew/opt/fzf
-export DOTFILES_RANGER_PATH=$(which ranger)
+export DOTFILES_RANGER_PATH=/usr/local/bin/ranger
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
 export PKG_CONFIG_PATH=/opt/homebrew/lib/pkgconfig
 export EDITOR=nvim
