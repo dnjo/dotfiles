@@ -13,7 +13,7 @@ reload-gpg-agent() {
 
 ranger() {
     if [ -z "$RANGER_LEVEL" ]; then
-        $DOTFILES_RANGER_PATH "$@"
+        python3 $DOTFILES_RANGER_PATH "$@"
     else
         exit
     fi
