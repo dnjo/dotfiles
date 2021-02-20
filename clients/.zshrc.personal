@@ -11,10 +11,6 @@ intel() {
   arch -x86_64 "$@"
 }
 
-brew-arm() {
-  /opt/homebrew/bin/brew "$@" 
-}
-
 source ~/.dotfiles/.zshrc
 source ~/.cargo/env
 source ~/.fzf.zsh
