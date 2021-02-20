@@ -1,0 +1,14 @@
+export ZSH_THEME=typewritten
+export DOTFILES_GPG_AGENT=true
+export DOTFILES_FZF_PATH=/usr/local/opt/fzf
+export DOTFILES_RANGER_PATH=$(which ranger)
+source ~/.dotfiles/.zshrc
+
+eval "$(pyenv init -)"
+
+source ~/.cargo/env
+
+export NVM_DIR=~/.nvm
+source /usr/local/opt/nvm/nvm.sh
+
+source ~/.fzf.zsh
