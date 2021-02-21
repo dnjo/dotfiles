@@ -83,6 +83,10 @@ nmap <silent> <c-l> :wincmd l<CR>
 nmap <silent> <c-_> gcc
 vmap <silent> <c-_> gc
 
+" vim-fugitive
+nmap <silent> <leader>gb :Gblame<CR>
+nmap <silent> <leader>gs :G<CR>
+
 " Tab completion
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
