@@ -32,7 +32,6 @@ if dein#load_state('~/.cache/dein')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
 
-  call dein#add('scrooloose/nerdtree')
   call dein#add('junegunn/fzf.vim')
   call dein#add('airblade/vim-gitgutter')
   call dein#add('tpope/vim-commentary')
@@ -40,6 +39,8 @@ if dein#load_state('~/.cache/dein')
   call dein#add('shime/vim-livedown')
   call dein#add('907th/vim-auto-save')
   call dein#add('tpope/vim-fugitive')
+  call dein#add('rbgrouleff/bclose.vim')
+  call dein#add('francoiscabrol/ranger.vim')
 
   call dein#end()
   call dein#save_state()
@@ -51,7 +52,10 @@ syntax enable
 
 " Mappings
 let mapleader = ","
-map <silent> <C-n> :NERDTreeToggle<CR>
+
+" ranger 
+let g:ranger_map_keys = 0
+nmap <silent> <c-n> :Ranger<CR>
 
 nmap <silent> <Leader>n :bn<CR>
 nmap <silent> <Leader>p :bp<CR>
@@ -65,8 +69,8 @@ nmap <silent> <Leader>Q :qa<CR>
 
 " fzf
 " Search files from current directory
-nmap <silent> <C-f> :Files<CR>
-nmap <silent> <Leader>f :Ag<CR>
+nmap <silent> <Leader>f :Files<CR>
+nmap <silent> <Leader>F :Ag<CR>
 
 " vim-tmux-navigator
 nmap <silent> <c-k> :wincmd k<CR>
