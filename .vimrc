@@ -60,7 +60,8 @@ nmap <Leader>b :b
 
 nmap <silent> <Leader>w :w<CR>
 nmap <silent> <Leader>wq :wq<CR>
-nmap <silent> <Leader>q :qa<CR>
+nmap <silent> <Leader>q :q<CR>
+nmap <silent> <Leader>Q :qa<CR>
 
 " fzf
 " Search files from current directory
