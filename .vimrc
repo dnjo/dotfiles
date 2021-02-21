@@ -39,6 +39,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('christoomey/vim-tmux-navigator')
   call dein#add('shime/vim-livedown')
   call dein#add('907th/vim-auto-save')
+  call dein#add('tpope/vim-fugitive')
 
   call dein#end()
   call dein#save_state()
