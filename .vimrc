@@ -47,6 +47,13 @@ if dein#load_state('~/.cache/dein')
 endif
 let g:deoplete#enable_at_startup = 1
 
+let g:loaded_python_provider = 0
+let g:loaded_ruby_provider = 0
+let g:loaded_perl_provider = 0
+let g:loaded_node_provider = 0
+" let g:python3_host_prog = '~/.pyenv/versions/neovim/bin/python'
+let g:python3_host_prog = $DOTFILES_NEOVIM_PYTHON_PATH
+
 filetype plugin indent on
 syntax enable
 
