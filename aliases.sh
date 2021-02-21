@@ -2,6 +2,7 @@
 
 alias gdh="git diff HEAD^ HEAD"
 alias glu="glo @{u}...HEAD"
+alias gst='nvim -c "Gstatus"'
 alias v=nvim
 alias r=ranger
 alias q=escape-ranger
