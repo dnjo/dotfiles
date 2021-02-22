@@ -100,6 +100,7 @@ vmap <silent> <c-_> gc
 " vim-fugitive
 nmap <silent> <leader>gb :Gblame<CR>
 nmap <silent> <leader>gs :G<CR>
+nmap <silent> <leader>gp :G push<CR>
 
 " Tab completion
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
