@@ -64,16 +64,22 @@ let mapleader = ","
 let g:ranger_map_keys = 0
 nmap <silent> <c-n> :Ranger<CR>
 
+" Buffers
 nmap <silent> <Leader>n :bn<CR>
 nmap <silent> <Leader>p :bp<CR>
 nmap <silent> <Leader>l :ls<CR>
-nmap <Leader>b :b
 
+" Save and quit
 nmap <silent> <Leader>w :w<CR>
 nmap <silent> <Leader>wq :wq<CR>
 nmap <silent> <Leader>wQ :wqa<CR>
 nmap <silent> <Leader>q :q<CR>
 nmap <silent> <Leader>Q :qa<CR>
+
+" Tabs
+nmap <silent> <c-t> :tabnew<CR>
+nmap <silent> <c-q> :tabprevious<CR>
+nmap <silent> <c-e> :tabnext<CR>
 
 " fzf
 " Search files from current directory
