@@ -2,6 +2,7 @@ export ZSH_THEME=typewritten
 export DOTFILES_GPG_AGENT=true
 export DOTFILES_FZF_PATH=/usr/local/opt/fzf
 export DOTFILES_RANGER_PATH=/usr/local/bin/ranger
+export DOTFILES_NEOVIM_PYTHON_PATH=~/.pyenv/versions/neovim/bin/python
 export EDITOR=nvim
 export HIGHLIGHT_STYLE=solarized-dark
 source ~/.dotfiles/.zshrc
@@ -14,3 +15,6 @@ export NVM_DIR=~/.nvm
 source /usr/local/opt/nvm/nvm.sh
 
 source ~/.fzf.zsh
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
