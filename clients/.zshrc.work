@@ -7,13 +7,7 @@ export EDITOR=nvim
 export HIGHLIGHT_STYLE=solarized-dark
 source ~/.dotfiles/.zshrc
 
-eval "$(pyenv init -)"
-
 source ~/.cargo/env
-
-export NVM_DIR=~/.nvm
-source /usr/local/opt/nvm/nvm.sh
-
 source ~/.fzf.zsh
 
 eval "$(pyenv init -)"
