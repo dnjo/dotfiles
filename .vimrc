@@ -62,7 +62,7 @@ let mapleader = ","
 
 " ranger 
 let g:ranger_map_keys = 0
-nmap <silent> <c-n> :Ranger<CR>
+nmap <silent> <c-n> :RangerCurrentFileExistingOrNewTab<CR>
 
 " Buffers
 nmap <silent> <Leader>n :bn<CR>
