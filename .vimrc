@@ -41,6 +41,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('tpope/vim-fugitive')
   call dein#add('rbgrouleff/bclose.vim')
   call dein#add('francoiscabrol/ranger.vim')
+  call dein#add('mbbill/undotree')
 
   call dein#end()
   call dein#save_state()
@@ -51,7 +52,6 @@ let g:loaded_python_provider = 0
 let g:loaded_ruby_provider = 0
 let g:loaded_perl_provider = 0
 let g:loaded_node_provider = 0
-" let g:python3_host_prog = '~/.pyenv/versions/neovim/bin/python'
 let g:python3_host_prog = $DOTFILES_NEOVIM_PYTHON_PATH
 
 filetype plugin indent on
@@ -98,9 +98,12 @@ nmap <silent> <c-_> gcc
 vmap <silent> <c-_> gc
 
 " vim-fugitive
-nmap <silent> <leader>gb :Gblame<CR>
-nmap <silent> <leader>gs :G<CR>
-nmap <silent> <leader>gp :G push<CR>
+nmap <silent> <Leader>gb :Gblame<CR>
+nmap <silent> <Leader>gs :G<CR>
+nmap <silent> <Leader>gp :G push<CR>
+
+" undotree
+nmap <silent> <Leader>u :UndotreeToggle<CR>
 
 " Tab completion
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
