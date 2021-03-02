@@ -24,3 +24,8 @@ escape-ranger() {
         exit
     fi
 }
+
+jqless() {
+  # https://beau.click/pipe-jq-to-less
+  jq -C "$@" | less -R
+}
