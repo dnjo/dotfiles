@@ -3,7 +3,7 @@ filetype off                  " required
 syntax enable
 colorscheme darcula
 set number
-set clipboard=unnamed
+set clipboard^=unnamed,unnamedplus
 set backspace=indent,eol,start
 
 filetype plugin indent on
