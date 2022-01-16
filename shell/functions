@@ -1,0 +1,12 @@
+reload-shell() {
+  source ~/.zshrc
+}
+
+etargz() {
+  mkdir -p $2 && tar xzvf $1 -C $2
+}
+
+jqless() {
+  # https://beau.click/pipe-jq-to-less
+  jq -C "$@" | less -R
+}

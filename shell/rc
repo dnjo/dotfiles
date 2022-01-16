@@ -1,0 +1,7 @@
+source $DOTFILES/shell/env
+source $DOTFILES/shell/functions
+source $DOTFILES/shell/aliases
+
+if [ -n "$DOTFILES_PYENV" ]; then
+    eval "$(pyenv init -)"
+fi
